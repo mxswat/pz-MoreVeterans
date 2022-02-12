@@ -1,0 +1,5 @@
+UI_EN = {
+    UI_ClothingType_Necklace = "Necklace",
+    UI_ClothingType_Mask = "Mask",
+    UI_ClothingType_BeltExtra = "Extra Belt",
+}

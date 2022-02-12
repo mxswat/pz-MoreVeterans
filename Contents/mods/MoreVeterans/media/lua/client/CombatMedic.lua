@@ -1,7 +1,7 @@
 ProfessionFramework.addProfession('CombatMedicVeteran', {
-    name = "Veteran: Combat Medic",
+    name = "Combat Medic Veteran",
     icon = "profession_CombatMedicVeteran",
-    cost = 2,
+    cost = 0,
     xp = {
         [Perks.Doctor] = 3,
         [Perks.Aiming] = 2,
@@ -16,6 +16,7 @@ ProfessionFramework.addProfession('CombatMedicVeteran', {
     },
     inventory = {
         ["Base.WristWatch_Right_ClassicMilitary"] = 1,
+        ["Base.FirstAidKit"] = 1,
     },
 })
 
@@ -23,6 +24,12 @@ ClothingSelectionDefinitions = ClothingSelectionDefinitions or {};
 
 ClothingSelectionDefinitions.CombatMedicVeteran = {
 	Female = {
+        Necklace = {
+            items = {"Base.Necklace_DogTag"}
+        },
+        Mask = {
+            items = {"Base.Hat_SurgicalMask_Blue"}
+        },
 		Shirt = {
 			items = {"Base.Shirt_CamoGreen"},
 		},
@@ -42,24 +49,4 @@ ClothingSelectionDefinitions.CombatMedicVeteran = {
             items = {"Base.Gloves_Surgical"}
         }
 	},
-    Male = {
-		Shirt = {
-			items = {"Base.Shirt_CamoGreen"},
-		},
-        Jacket = {
-            items = {"Base.JacketLong_Doctor"},
-        },
-		Pants = {
-			items = {"Base.Trousers_CamoGreen"},
-		},
-        Shoes = {
-            items = {"Base.Shoes_ArmyBoots"}
-        },
-        BeltExtra = {
-            items = {"Base.HolsterSimple"}
-        },
-        Hands = {
-            items = {"Base.Gloves_Surgical"}
-        }
-	}
 }
