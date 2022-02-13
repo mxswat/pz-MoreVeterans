@@ -18,6 +18,23 @@ ProfessionFramework.addProfession('CombatMedicVeteran', {
         ["Base.WristWatch_Right_ClassicMilitary"] = 1,
         ["Base.FirstAidKit"] = 1,
     },
+    OnNewGame = function (player, square, profession)
+        local fak =  player:getInventory():FindAndReturn("Base.FirstAidKit");
+        if not fak then
+            fak = player:getInventory():AddItem("Base.Bag_Schoolbag");
+            fak:getItemContainer():AddItem("Base.AlcoholBandage");
+        end
+        fak:getItemContainer():AddItem("Base.AlcoholBandage");
+        fak:getItemContainer():AddItem("Base.AlcoholBandage");
+        fak:getItemContainer():AddItem("Base.AlcoholBandage");
+        fak:getItemContainer():AddItem("Base.AlcoholBandage");
+        fak:getItemContainer():AddItem("Base.Tweezers");
+        fak:getItemContainer():AddItem("Base.SutureNeedle");
+        fak:getItemContainer():AddItem("Base.AlcoholWipes");
+        fak:getItemContainer():AddItem("Base.PillsBeta");
+        fak:getItemContainer():AddItem("Base.Pills");
+        fak:getItemContainer():AddItem("Base.PillsVitamins");
+    end
 })
 
 ClothingSelectionDefinitions = ClothingSelectionDefinitions or {};
