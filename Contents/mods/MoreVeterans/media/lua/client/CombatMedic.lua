@@ -36,6 +36,33 @@ ProfessionFramework.addProfession('CombatMedicVeteran', {
         fak:getItemContainer():AddItem("Base.Pills");
         fak:getItemContainer():AddItem("Base.PillsVitamins");
         fak:getItemContainer():AddItem("Base.PillsVitamins");
+
+        local weapon = player:getInventory():AddItem("Base.Pistol"); -- It's the M9
+        local scope = InventoryItemFactory.CreateItem("Base.IronSight");
+        local laser = InventoryItemFactory.CreateItem("Base.Laser");
+        weapon:attachWeaponPart(scope)
+        weapon:attachWeaponPart(laser)
+
+        local magazines = {
+            player:getInventory():AddItem("Base.9mmClip"),
+            player:getInventory():AddItem("Base.9mmClip"),
+            player:getInventory():AddItem("Base.9mmClip"),
+        }
+
+        for _, magazine in pairs(magazines) do
+            magazine:setCurrentAmmoCount(magazine:getMaxAmmo())
+        end
+
+        weapon:setCurrentAmmoCount(magazines[1]:getCurrentAmmoCount())
+	    weapon:setContainsClip(true)
+
+        player:getInventory():AddItem("Base.Bullets9mmBox");
+
+        -- Attach pistol in the holster
+        -- player:setAttachedItem("HolsterRight", weapon);
+
+        -- put the pistol in the hand instead
+        player:setPrimaryHandItem(weapon);
     end
 })
 
