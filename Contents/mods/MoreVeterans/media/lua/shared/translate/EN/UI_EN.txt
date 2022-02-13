@@ -2,4 +2,6 @@ UI_EN = {
     UI_ClothingType_Necklace = "Necklace",
     UI_ClothingType_Mask = "Mask",
     UI_ClothingType_BeltExtra = "Extra Belt",
+    UI_ClothingType_AmmoStrap = "Ammo Strap",
+    UI_ClothingType_TorsoExtra = "Extra Torso",
 }

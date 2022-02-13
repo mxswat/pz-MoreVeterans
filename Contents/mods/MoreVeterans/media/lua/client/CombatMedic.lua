@@ -7,6 +7,7 @@ ProfessionFramework.addProfession('CombatMedicVeteran', {
         [Perks.Aiming] = 2,
         [Perks.Reloading] = 1,
         [Perks.Nimble] = 1,
+        [Perks.Lightfoot] = 1,
     },
     clothing = {
         -- not working with the current version of the Profession Framework on steam. as date 02-JAN-2022
@@ -16,23 +17,24 @@ ProfessionFramework.addProfession('CombatMedicVeteran', {
     },
     inventory = {
         ["Base.WristWatch_Right_ClassicMilitary"] = 1,
-        ["Base.FirstAidKit"] = 1,
     },
     OnNewGame = function (player, square, profession)
-        local fak =  player:getInventory():FindAndReturn("Base.FirstAidKit");
-        if not fak then
-            fak = player:getInventory():AddItem("Base.Bag_Schoolbag");
-            fak:getItemContainer():AddItem("Base.AlcoholBandage");
-        end
+        local fak = player:getInventory():AddItem("Base.Bag_Schoolbag");
+        fak:getItemContainer():AddItem("Base.AlcoholBandage");
         fak:getItemContainer():AddItem("Base.AlcoholBandage");
         fak:getItemContainer():AddItem("Base.AlcoholBandage");
         fak:getItemContainer():AddItem("Base.AlcoholBandage");
         fak:getItemContainer():AddItem("Base.AlcoholBandage");
         fak:getItemContainer():AddItem("Base.Tweezers");
         fak:getItemContainer():AddItem("Base.SutureNeedle");
+        fak:getItemContainer():AddItem("Base.SutureNeedle");
+        fak:getItemContainer():AddItem("Base.AlcoholWipes");
         fak:getItemContainer():AddItem("Base.AlcoholWipes");
         fak:getItemContainer():AddItem("Base.PillsBeta");
+        fak:getItemContainer():AddItem("Base.PillsBeta");
         fak:getItemContainer():AddItem("Base.Pills");
+        fak:getItemContainer():AddItem("Base.Pills");
+        fak:getItemContainer():AddItem("Base.PillsVitamins");
         fak:getItemContainer():AddItem("Base.PillsVitamins");
     end
 })
@@ -41,6 +43,9 @@ ClothingSelectionDefinitions = ClothingSelectionDefinitions or {};
 
 ClothingSelectionDefinitions.CombatMedicVeteran = {
 	Female = {
+        Hat = {
+            items = {"Base.Hat_Army"}
+        },
         Necklace = {
             items = {"Base.Necklace_DogTag"}
         },
@@ -50,6 +55,9 @@ ClothingSelectionDefinitions.CombatMedicVeteran = {
 		Shirt = {
 			items = {"Base.Shirt_CamoGreen"},
 		},
+        TorsoExtra = {
+            items = {"Base.Vest_BulletArmy"}
+        },
         Jacket = {
             items = {"Base.JacketLong_Doctor"},
         },
