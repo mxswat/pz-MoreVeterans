@@ -58,11 +58,10 @@ ProfessionFramework.addProfession('CombatMedicVeteran', {
 
         player:getInventory():AddItem("Base.Bullets9mmBox");
 
-        -- Attach pistol in the holster -- For some fkng reason this does not work
-        -- player:setAttachedItem("HolsterRight", weapon);
-
-        -- put the pistol in the hand instead
-        player:setPrimaryHandItem(weapon);
+        -- Attach pistol in the holster
+        player:setAttachedItem("Holster Right", weapon);
+        -- Force the weapon to be in the holster slot
+        weapon:setAttachedSlot(2);
     end
 })
 
