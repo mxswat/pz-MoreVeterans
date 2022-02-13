@@ -19,7 +19,7 @@ ProfessionFramework.addProfession('CombatMedicVeteran', {
         ["Base.WristWatch_Right_ClassicMilitary"] = 1,
     },
     OnNewGame = function (player, square, profession)
-        local fak = player:getInventory():AddItem("Base.Bag_Schoolbag");
+        local fak = player:getInventory():AddItem("Base.FirstAidKit");
         fak:getItemContainer():AddItem("Base.AlcoholBandage");
         fak:getItemContainer():AddItem("Base.AlcoholBandage");
         fak:getItemContainer():AddItem("Base.AlcoholBandage");

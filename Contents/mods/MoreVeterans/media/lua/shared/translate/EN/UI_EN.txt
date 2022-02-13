@@ -4,4 +4,5 @@ UI_EN = {
     UI_ClothingType_BeltExtra = "Extra Belt",
     UI_ClothingType_AmmoStrap = "Ammo Strap",
     UI_ClothingType_TorsoExtra = "Extra Torso",
+    UI_profdesc_CombatEngineerVeteran = "Can operate generators, Can make traps and explosives"
 }

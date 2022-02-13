@@ -57,9 +57,6 @@ ClothingSelectionDefinitions.MarksmanVeteran = {
         Necklace = {
             items = {"Base.Necklace_DogTag"}
         },
-        Mask = {
-            items = {"Base.Hat_SurgicalMask_Blue"}
-        },
 		Shirt = {
 			items = {"Base.Shirt_CamoGreen"},
 		},
