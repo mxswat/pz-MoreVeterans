@@ -1,42 +1,25 @@
-ProfessionFramework.addProfession('CombatMedicVeteran', {
-    name = "Combat Medic Veteran",
-    icon = "profession_CombatMedicVeteran",
+ProfessionFramework.addProfession('CIAVeteran', {
+    name = "CIA Veteran",
+    icon = "profession_CIAVeteran",
     cost = -6,
     xp = {
-        [Perks.Doctor] = 3,
-        [Perks.Aiming] = 2,
-        [Perks.Reloading] = 1,
-        [Perks.Nimble] = 1,
-        [Perks.Lightfoot] = 1,
+        [Perks.Aiming] = 3,
+        [Perks.Reloading] = 3,
+        [Perks.Nimble] = 3,
+        [Perks.Sneak] = 6,
     },
     clothing = {
         -- not working with the current version of the Profession Framework on steam. as date 02-JAN-2022
     },
     traits = {
         'Desensitized',
+        'Graceful2',
+        'Inconspicuous2'
     },
     inventory = {
         ["Base.WristWatch_Right_ClassicMilitary"] = 1,
     },
     OnNewGame = function (player, square, profession)
-        local fak = player:getInventory():AddItem("Base.FirstAidKit");
-        fak:getItemContainer():AddItem("Base.AlcoholBandage");
-        fak:getItemContainer():AddItem("Base.AlcoholBandage");
-        fak:getItemContainer():AddItem("Base.AlcoholBandage");
-        fak:getItemContainer():AddItem("Base.AlcoholBandage");
-        fak:getItemContainer():AddItem("Base.AlcoholBandage");
-        fak:getItemContainer():AddItem("Base.Tweezers");
-        fak:getItemContainer():AddItem("Base.SutureNeedle");
-        fak:getItemContainer():AddItem("Base.SutureNeedle");
-        fak:getItemContainer():AddItem("Base.AlcoholWipes");
-        fak:getItemContainer():AddItem("Base.AlcoholWipes");
-        fak:getItemContainer():AddItem("Base.PillsBeta");
-        fak:getItemContainer():AddItem("Base.PillsBeta");
-        fak:getItemContainer():AddItem("Base.Pills");
-        fak:getItemContainer():AddItem("Base.Pills");
-        fak:getItemContainer():AddItem("Base.PillsVitamins");
-        fak:getItemContainer():AddItem("Base.PillsVitamins");
-
         local weapon = player:getInventory():AddItem("Base.Pistol"); -- It's the M9
         local scope = InventoryItemFactory.CreateItem("Base.IronSight");
         local laser = InventoryItemFactory.CreateItem("Base.Laser");
@@ -67,37 +50,31 @@ ProfessionFramework.addProfession('CombatMedicVeteran', {
 
 ClothingSelectionDefinitions = ClothingSelectionDefinitions or {};
 
-ClothingSelectionDefinitions.CombatMedicVeteran = {
+ClothingSelectionDefinitions.CIAVeteran = {
 	Female = {
         Hat = {
-            items = {"Base.Hat_Army"}
+            items = {"Base.Hat_NBCmask"}
         },
         Necklace = {
             items = {"Base.Necklace_DogTag"}
         },
-        Mask = {
-            items = {"Base.Hat_SurgicalMask_Blue"}
-        },
 		Shirt = {
-			items = {"Base.Shirt_CamoGreen"},
+			items = {"Base.Shirt_CamoUrban"},
 		},
         TorsoExtra = {
             items = {"Base.Vest_BulletArmy"}
         },
-        Jacket = {
-            items = {"Base.JacketLong_Doctor"},
-        },
 		Pants = {
-			items = {"Base.Trousers_CamoGreen"},
+			items = {"Base.Trousers_CamoUrban"},
 		},
         Shoes = {
             items = {"Base.Shoes_ArmyBoots"}
         },
         BeltExtra = {
-            items = {"Base.HolsterSimple"}
+            items = {"Base.HolsterDouble"}
         },
         Hands = {
-            items = {"Base.Gloves_Surgical"}
+            items = {"Base.Gloves_LeatherGloves"}
         }
 	},
 }

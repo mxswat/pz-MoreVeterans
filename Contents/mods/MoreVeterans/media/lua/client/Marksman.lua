@@ -1,7 +1,7 @@
 ProfessionFramework.addProfession('MarksmanVeteran', {
     name = "Marksman Veteran",
     icon = "profession_MarksmanVeteran",
-    cost = 0,
+    cost = -6,
     xp = {
         [Perks.Aiming] = 5,
         [Perks.Reloading] = 3,

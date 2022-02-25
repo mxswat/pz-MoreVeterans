@@ -1,10 +1,9 @@
 ProfessionFramework.addProfession('CombatEngineerVeteran', {
     name = "Combat Engineer Veteran",
     icon = "profession_CombatEngineerVeteran",
-    cost = 0,
+    cost = -6,
     xp = {
         [Perks.Electricity] = 2,
-        [Perks.Mechanics] = 2,
         [Perks.Mechanics] = 2,
         [Perks.MetalWelding] = 2,
         [Perks.Woodwork] = 2,
@@ -50,7 +49,7 @@ ProfessionFramework.addProfession('CombatEngineerVeteran', {
         bag:getItemContainer():AddItem("Base.Aerosolbomb");
         bag:getItemContainer():AddItem("Base.Aerosolbomb");
 
-        local weapon = player:getInventory():AddItem("Revolver_Short"); -- It's the M36 Revolver)
+        local weapon = player:getInventory():AddItem("Revolver_Short"); -- It's the M36 Revolver
         weapon:setCurrentAmmoCount(5)
 
         player:getInventory():AddItem("Base.Bullets38Box");
